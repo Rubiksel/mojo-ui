@@ -15,8 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Button, buttonVariants } from "./ui/button";
+import { Button } from "./ui/button";
 import {
   Boxes,
   Building2,
@@ -81,15 +80,6 @@ export const Navbar = () => {
                 </SheetHeader>
 
                 <nav className="flex flex-col gap-6 mt-6">
-                  {/* Features (simple link) */}
-                  <a
-                    href="#features"
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-2 text-sm text-gray-600 hover:text-violet-600"
-                  >
-                    Features
-                  </a>
-
                   {/* General */}
                   <div>
                     <h3 className="text-sm font-semibold mb-2 text-gray-700">
@@ -100,14 +90,14 @@ export const Navbar = () => {
                         href="#features"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <Boxes className="text-indigo-600 w-4 h-4" />
+                        <Boxes className="text-primary w-4 h-4" />
                         Features
                       </a>
                       <a
                         href="#pricing"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <CircleDollarSign className="text-indigo-600 w-4 h-4" />
+                        <CircleDollarSign className="text-primary w-4 h-4" />
                         Pricing
                       </a>
                     </div>
@@ -122,49 +112,49 @@ export const Navbar = () => {
                         href="/it-helpdesk"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <MonitorCog className="text-indigo-600 w-4 h-4" />
+                        <MonitorCog className="text-primary w-4 h-4" />
                         IT Service Desk
                       </a>
                       <a
                         href="/solutions/customer"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <Users className="text-indigo-600 w-4 h-4" />
+                        <Users className="text-primary w-4 h-4" />
                         Customer Service
                       </a>
                       <a
                         href="/solutions/asset"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <Package className="text-indigo-600 w-4 h-4" />
+                        <Package className="text-primary w-4 h-4" />
                         Asset Management
                       </a>
                       <a
                         href="/solutions/growing"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <Rocket className="text-indigo-600 w-4 h-4" />
+                        <Rocket className="text-primary w-4 h-4" />
                         Growing Businesses
                       </a>
                       <a
                         href="/solutions/ecommerce"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <ShoppingCart className="text-indigo-600 w-4 h-4" />
+                        <ShoppingCart className="text-primary w-4 h-4" />
                         E-commerce
                       </a>
                       <a
                         href="/solutions/education"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <GraduationCap className="text-indigo-600 w-4 h-4" />
+                        <GraduationCap className="text-primary w-4 h-4" />
                         Education
                       </a>
                       <a
                         href="/solutions/healthcare"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <HeartPulse className="text-indigo-600 w-4 h-4" />
+                        <HeartPulse className="text-primary w-4 h-4" />
                         Healthcare
                       </a>
                     </div>
@@ -180,84 +170,74 @@ export const Navbar = () => {
                         href="/resources/case-studies/austin"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <School className="text-indigo-600 w-4 h-4" />
+                        <School className="text-primary w-4 h-4" />
                         Austin Community College
                       </a>
                       <a
                         href="/resources/case-studies/hebron"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <Library className="text-indigo-600 w-4 h-4" />
+                        <Library className="text-primary w-4 h-4" />
                         Hebron Public School
                       </a>
                       <a
                         href="/resources/case-studies/raksha"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <Building2 className="text-indigo-600 w-4 h-4" />
+                        <Building2 className="text-primary w-4 h-4" />
                         Raksha Technologies
                       </a>
                       <a
                         href="/resources/case-studies/marion"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <NotebookText className="text-indigo-600 w-4 h-4" />
+                        <NotebookText className="text-primary w-4 h-4" />
                         Marion Central School
                       </a>
                       <a
                         href="/resources/guides/evaluate"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <FileSearch className="text-indigo-600 w-4 h-4" />
+                        <FileSearch className="text-primary w-4 h-4" />
                         Evaluate IT Helpdesk
                       </a>
                       <a
                         href="/resources/guides/features"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <ListChecks className="text-indigo-600 w-4 h-4" />
+                        <ListChecks className="text-primary w-4 h-4" />
                         10 Features
                       </a>
                       <a
                         href="/resources/guides/best-practices"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <CheckCircle className="text-indigo-600 w-4 h-4" />
+                        <CheckCircle className="text-primary w-4 h-4" />
                         Best Practices
                       </a>
                       <a
                         href="/resources/guides/faqs"
                         className="flex items-center gap-2 text-sm text-gray-600"
                       >
-                        <HelpCircle className="text-indigo-600 w-4 h-4" />
+                        <HelpCircle className="text-primary w-4 h-4" />
                         FAQs
                       </a>
                     </div>
                   </div>
-
-                  {/* Pricing (simple link) */}
-                  <a
-                    href="#pricing"
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-2 text-sm text-gray-600 hover:text-violet-600"
-                  >
-                    Pricing
-                  </a>
-
                   {/* Github CTA */}
-                  <a
-                    rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-                    target="_blank"
-                    className={`w-full border flex items-center justify-center gap-2 ${buttonVariants(
-                      {
-                        variant: "secondary",
-                      }
-                    )}`}
-                  >
-                    <GitHubLogoIcon className="w-5 h-5" />
-                    Github Repo
-                  </a>
+                  <div className="flex gap-4 items-center">
+                    <a href="/sign-in" rel="noreferrer noopener">
+                      <Button variant="outline" className="w-40">
+                        Sign in
+                      </Button>
+                    </a>
+                    <a
+                      href="https://signup.mojohelpdesk.com/mc/get-started/register/1020"
+                      rel="noreferrer noopener"
+                    >
+                      <Button className="w-40">Try for free</Button>
+                    </a>
+                  </div>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -272,7 +252,7 @@ export const Navbar = () => {
                   <NavigationMenuRadix.Link asChild>
                     <a
                       href="#features"
-                      className="text-sm font-medium text-gray-700 hover:text-violet-600"
+                      className="text-sm font-medium text-gray-700 hover:text-primary"
                     >
                       Features
                     </a>
@@ -281,7 +261,7 @@ export const Navbar = () => {
 
                 {/* Solutions dropdown */}
                 <NavigationMenuRadix.Item>
-                  <NavigationMenuRadix.Trigger className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-violet-600">
+                  <NavigationMenuRadix.Trigger className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-primary">
                     Solutions <CaretDownIcon className="h-4 w-4" />
                   </NavigationMenuRadix.Trigger>
                   <NavigationMenuRadix.Content
@@ -341,7 +321,7 @@ export const Navbar = () => {
 
                 {/* Resources dropdown */}
                 <NavigationMenuRadix.Item>
-                  <NavigationMenuRadix.Trigger className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-violet-600">
+                  <NavigationMenuRadix.Trigger className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-primary">
                     Resources <CaretDownIcon className="h-4 w-4" />
                   </NavigationMenuRadix.Trigger>
                   <NavigationMenuRadix.Content
@@ -409,7 +389,7 @@ export const Navbar = () => {
                   <NavigationMenuRadix.Link asChild>
                     <a
                       href="#pricing"
-                      className="text-sm font-medium text-gray-700 hover:text-violet-600"
+                      className="text-sm font-medium text-gray-700 hover:text-primary"
                     >
                       Pricing
                     </a>
@@ -472,7 +452,7 @@ function DropdownSection({
                 className="flex items-center gap-2 rounded-md py-2 px-2 text-sm transition"
                 style={{ color: "var(--gray-11)" }}
               >
-                <span className="flex items-center justify-center w-4 h-4 text-indigo-600">
+                <span className="flex items-center justify-center w-4 h-4 text-primary">
                   {link.icon}
                 </span>
                 <span className="leading-none">{link.label}</span>
