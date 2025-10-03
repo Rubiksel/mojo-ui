@@ -39,30 +39,6 @@ import {
 } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 
-interface RouteProps {
-  href: string;
-  label: string;
-}
-
-const routeList: RouteProps[] = [
-  {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#solutions",
-    label: "Solutions",
-  },
-  {
-    href: "#resources",
-    label: "Resources",
-  },
-  {
-    href: "#pricing",
-    label: "Pricing",
-  },
-];
-
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
