@@ -1,3 +1,4 @@
+import { Quote } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   Card,
@@ -8,7 +9,6 @@ import {
 } from "@/components/ui/card";
 
 interface TestimonialProps {
-  image: string;
   name: string;
   userName: string;
   comment: string;
@@ -16,95 +16,57 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe",
-    comment: "This landing page is awesome!",
+    name: "Mike H.",
+    userName: "Director, Campus Technology Services",
+    comment:
+      '"Mojo Helpdesk has allowed us to get far more people outside of IT involved. Many tickets cross-organizational boundaries as they are multi-step so Mojo Helpdesk has helped solve that problem."',
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe1",
+    name: "Nick Elder",
+    userName: "CIO, Southern Institute of Technology, New Zealand",
     comment:
-      "Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-  },
-
-  {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe2",
-    comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      '"A lot of organisations our size use enterprise products that are far more expensive, and we have tried a few, but now our staff have used Mojo, they don’t want to go back to anything else. You have created an absolute gem."',
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe3",
+    name: "Todd A.",
+    userName: "General Manager of Technology, Sona Dermatology & MedSpa",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe4",
-    comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.",
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe5",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      '"We needed to reduce complexity and find a solution that was sized and priced right for our business. Mojo checked all the boxes."',
   },
 ];
 
 export const Testimonials = () => {
   return (
-    <section
-      id="testimonials"
-      className="container py-24 sm:py-32"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold">
-        Discover Why
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          {" "}
-          People Love{" "}
-        </span>
-        This Landing Page
+    <section id="testimonials" className="container py-24 sm:py-32">
+      <h2 className="text-3xl md:text-4xl font-bold pb-8">
+        What Our Customer Are Saying
       </h2>
 
-      <p className="text-xl text-muted-foreground pt-4 pb-8">
+      {/* <p className="text-xl text-muted-foreground pt-4 pb-8">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
         facere hic reiciendis illo
-      </p>
+      </p> */}
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
-        {testimonials.map(
-          ({ image, name, userName, comment }: TestimonialProps) => (
-            <Card
-              key={userName}
-              className="max-w-md md:break-inside-avoid overflow-hidden"
-            >
-              <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                <Avatar>
-                  <AvatarImage
-                    alt=""
-                    src={image}
-                  />
-                  <AvatarFallback>OM</AvatarFallback>
-                </Avatar>
+        {testimonials.map(({ name, userName, comment }: TestimonialProps) => (
+          <Card
+            key={userName}
+            className="max-w-md md:break-inside-avoid overflow-hidden"
+          >
+            <CardHeader className="flex flex-row items-center gap-4 pb-2">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[hsl(var(--primary))] text-white">
+                <Quote className="w-6 h-6" />
+              </div>
 
-                <div className="flex flex-col">
-                  <CardTitle className="text-lg">{name}</CardTitle>
-                  <CardDescription>{userName}</CardDescription>
-                </div>
-              </CardHeader>
+              <div className="flex flex-col">
+                <CardTitle className="text-lg">{name}</CardTitle>
+                <CardDescription>{userName}</CardDescription>
+              </div>
+            </CardHeader>
 
-              <CardContent>{comment}</CardContent>
-            </Card>
-          )
-        )}
+            <CardContent>{comment}</CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );
