@@ -1,57 +1,41 @@
-import { Radar } from "lucide-react";
-
-interface SponsorProps {
-  icon: JSX.Element;
-  name: string;
+interface OrgProps {
+  src: string;
+  alt: string;
 }
 
-const sponsors: SponsorProps[] = [
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 1",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 2",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 3",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 4",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 5",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 6",
-  },
+const orgs: OrgProps[] = [
+  { src: "/logos/abc.svg", alt: "Associated Builders and Contractors" },
+  { src: "/logos/das-keyboard.png", alt: "Das Keyboard" },
+  { src: "/logos/dcs.png", alt: "Georgia State Department of Community Supervision" },
+  { src: "/logos/harvard.png", alt: "Harvard" },
+  { src: "/logos/LACMA.png", alt: "Los Angeles County Museum of Art" },
+  { src: "/logos/michigan.png", alt: "Michigan State University" },
+  { src: "/logos/rocketRoute.svg", alt: "RocketRoute" },
+  { src: "/logos/scotts.png", alt: "Scotts" },
+  { src: "/logos/sofistadium.png", alt: "SoFi Stadium" },
+  { src: "/logos/spurs.png", alt: "San Antonio Spurs" },
+  { src: "/logos/texashospital.png", alt: "Texas Children's Hospital" },
 ];
 
 export const Sponsors = () => {
   return (
-    <section
-      id="sponsors"
-      className="container pt-24 sm:py-32"
-    >
-      <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
-        Investors and founders
+    <section id="sponsors" className="container pt-24  overflow-hidden">
+      <h2 className="text-center text-md lg:text-xl font-bold mb-12 text-primary">
+        Trusted by Leading Organizations
       </h2>
 
-      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
-        {sponsors.map(({ icon, name }: SponsorProps) => (
-          <div
-            key={name}
-            className="flex items-center gap-1 text-muted-foreground/60"
-          >
-            <span>{icon}</span>
-            <h3 className="text-xl  font-bold">{name}</h3>
-          </div>
-        ))}
+      <div className="relative w-full overflow-hidden">
+        <div className="flex animate-marquee gap-12">
+          {orgs.concat(orgs).map(({ src, alt }, idx) => (
+            <div key={idx} className="flex items-center justify-center min-w-[140px]">
+              <img
+                src={src}
+                alt={alt}
+                className="max-w-[120px] h-auto object-contain grayscale hover:grayscale-0 transition"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
