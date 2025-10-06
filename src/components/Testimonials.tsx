@@ -1,5 +1,4 @@
 import { Quote } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   Card,
   CardContent,
@@ -39,7 +38,7 @@ export const Testimonials = () => {
   return (
     <section id="testimonials" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold pb-8">
-        What Our Customer Are Saying
+        What Our Customers Are Saying
       </h2>
 
       {/* <p className="text-xl text-muted-foreground pt-4 pb-8">

@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -105,12 +103,15 @@ export const Pricing = () => {
   const getPrice = (price: number, title: string) => {
     let finalPrice = price;
 
-    if (nonProfit && (title === "Business" || title === "Enterprise")) {
-      // School/non-profit discount = 25% (no yearly stacking)
-      finalPrice = price * 0.75;
-    } else if (yearly) {
-      // Otherwise apply yearly 10% discount
-      finalPrice = price * 0.9;
+    if (yearly) {
+      // Apply yearly discounts only
+      if (nonProfit && (title === "Business" || title === "Enterprise")) {
+        // 25% discount for yearly school/non-profit
+        finalPrice = price * 0.75;
+      } else {
+        // 10% discount for regular yearly billing
+        finalPrice = price * 0.9;
+      }
     }
 
     return Number(finalPrice.toFixed(1)); // keep 1 decimal
@@ -189,11 +190,12 @@ export const Pricing = () => {
         ))}
       </div>
       <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
-        (*) One year subscription: a 10% discount is available for all businesses.
+        (*) One year subscription: a 10% discount is available for all
+        businesses.
         <br />
         (**) A total of 25% discount is available to educational and non-profit
-        organizations for the Business and Enterprise plan yearly subscription only.
-        Discounts are not cumulative.
+        organizations for the Business and Enterprise plan yearly subscription
+        only. Discounts are not cumulative.
       </p>
     </section>
   );
